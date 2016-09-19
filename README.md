@@ -1,1 +1,1 @@
-# Chronometer Electron
+# Stopwatch Electron
