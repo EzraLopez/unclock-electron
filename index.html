@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="stopwatch-mode">
+<head lang="en">
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Material Design Stopwatch, Alarm and Timer</title>
+
+    <link type="text/css" rel="stylesheet" href="assets/materialize/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/styles.css">
+	<link type="text/css" rel="stylesheet" href="assets/jonthornton-jquery-timepicker/jquery.timepicker.css">
+
+</head>
+<body>
+
+<div class="wrapper">
+
+	<header class="switch-clocks z-depth-1">
+		<a class="alarm waves-effect">Alarm</a>
+		<a class="stopwatch waves-effect">Stopwatch</a>
+		<a class="timer waves-effect">Timer</a>
+	</header>
+
+	<div class="app">
+
+		<div class="container alarm hidden">
+			<form>
+
+				<div class="control input-field">
+					<input id="alarm-input" type="text" class="validate">
+					<label for="alarm-input">Set Time</label>
+				</div>
+
+				<div class="control switch">
+					<label>
+						Off
+						<input type="checkbox" disabled id="alarm-btn">
+						<span class="lever"></span>
+						On
+					</label>
+				</div>
+
+				<div class="control checkbox">
+					<input type="checkbox" id="alarm-sounds" />
+					<label for="alarm-sounds">Sounds</label>
+				</div>
+
+			</form>
+
+			<div class="clock z-depth-1 inactive">
+				<span>Not Set</span>
+				<div class="overlay waves-effect"></div>
+			</div>
+		</div>
+
+		<div class="container stopwatch">
+			<form>
+				<a id="stopwatch-btn-start" class="waves-effect waves-teal btn-flat">Start</a>
+				<a id="stopwatch-btn-pause" class="waves-effect waves-teal btn-flat">Pause</a>
+				<a id="stopwatch-btn-reset" class="waves-effect waves-teal btn-flat">Reset</a>
+			</form>
+
+			<div class="clock inactive z-depth-1">
+				<span>0:00:00.0</span>
+				<div class="overlay waves-effect"></div>
+			</div>
+		</div>
+
+		<div class="container timer hidden">
+			<form>
+				<div class="control input-field">
+					<input id="timer-input" type="number">
+					<label for="timer-input">Minutes</label>
+				</div>
+
+				<a class="timer-btn start waves-effect"><i class="mdi-av-play-arrow"></i></a>
+				<a class="timer-btn pause waves-effect"><i class="mdi-av-pause"></i></a>
+				<a class="timer-btn reset waves-effect"><i class="mdi-av-replay"></i></a>
+
+				<div class="control checkbox">
+					<input type="checkbox" id="timer-sounds" />
+					<label for="timer-sounds">Sounds</label>
+				</div>
+
+			</form>
+
+			<div class="clock inactive z-depth-1 waves-effect">0:00</div>
+		</div>
+
+
+	</div>
+
+	<div id="times-up-modal" class="modal">
+		<div class="modal-content">
+			<h3>Time's Up!</h3>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="dismiss-alarm-sounds modal-action waves-effect waves-red btn-flat">Dismiss Alarm</a>
+		</div>
+	</div>
+
+</div>
+
+<!-- Source: http://stackoverflow.com/a/37480521/6138589 -->
+<!-- Insert this line above script imports  -->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="assets/materialize/js/materialize.min.js"></script>
+<script src="assets/jonthornton-jquery-timepicker/jquery.timepicker.min.js"></script>
+<script src="assets/js/hammer.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/alarm.js"></script>
+<script src="assets/js/stopwatch.js"></script>
+<script src="assets/js/timer.js"></script>
+
+<!-- Insert this line after script imports -->
+<script>if (window.module) module = window.module;</script>
+
+</body>
+</html>
