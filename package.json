@@ -1,5 +1,5 @@
 {
-  "name"    : "stopwatch-electron",
-  "version" : "0.1.0",
+  "name"    : "unclock-electron",
+  "version" : "0.1.1",
   "main"    : "main.js"
 }
